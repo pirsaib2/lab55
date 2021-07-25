@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSON</title>
+</head>
+<body>
+    <h1>Lab 5 JSON</h1>
+    <div id="output"></div>
+    <script type="text/javascript">
+    var data={
+        "results": [{
+		"gender": "male",
+		"name": {
+			"title": "Mr",
+			"first": "Kévim",
+			"last": "Pereira"
+		},
+		"location": {
+			"street": {
+				"number": 1340,
+				"name": "Rua São Jorge "
+			},
+			"city": "Trindade",
+			"state": "Tocantins",
+			"country": "Brazil",
+			"postcode": 84537,
+			"coordinates": {
+				"latitude": "-75.3247",
+				"longitude": "-98.4571"
+			},
+			"timezone": {
+				"offset": "+5:00",
+				"description": "Ekaterinburg, Islamabad, Karachi, Tashkent"
+			}
+		},
+		"email": "kevim.pereira@example.com",
+		"login": {
+			"uuid": "9ca2befd-e4f1-470c-90a6-f2d584dfd4bb",
+			"username": "redgoose978",
+			"password": "147852",
+			"salt": "5q0eBdXY",
+			"md5": "5e83db0d9e223980474bf7d8f67a1ea5",
+			"sha1": "2cb03394e1cf884ecca8bf9219fea29dca2e8df1",
+			"sha256": "7749dfb6a8c86e19444d297348a125cad5b9bba8fc0a912fce05a39dad380d3f"
+		},
+		"dob": {
+			"date": "1954-07-24T23:29:58.523Z",
+			"age": 67
+		},
+		"registered": {
+			"date": "2016-07-07T18:21:14.346Z",
+			"age": 5
+		},
+		"phone": "(52) 8982-6652",
+		"cell": "(25) 0181-1104",
+		"id": {
+			"name": "",
+			"value": null
+		},
+		"picture": {
+			"large": "https://randomuser.me/api/portraits/men/32.jpg",
+			"medium": "https://randomuser.me/api/portraits/med/men/32.jpg",
+			"thumbnail": "https://randomuser.me/api/portraits/thumb/men/32.jpg"
+		},
+		"nat": "BR"
+	}],
+	"res": [{
+		"gender": "female",
+		"name": {
+			"title": "Mrs",
+			"first": "Sara",
+			"last": "Rasmussen"
+		},
+		"location": {
+			"street": {
+				"number": 8509,
+				"name": "Lyngvejen"
+			},
+			"city": "Branderup J",
+			"state": "Hovedstaden",
+			"country": "Denmark",
+			"postcode": 63099,
+			"coordinates": {
+				"latitude": "-29.2809",
+				"longitude": "101.4807"
+			},
+			"timezone": {
+				"offset": "+10:00",
+				"description": "Eastern Australia, Guam, Vladivostok"
+			}
+		},
+		"email": "sara.rasmussen@example.com",
+		"login": {
+			"uuid": "ce8fd724-9893-4db3-8c45-f83e76c2a349",
+			"username": "goldenzebra600",
+			"password": "diver",
+			"salt": "ILm2TlIY",
+			"md5": "874550f3e1bbec6e846b49dc6a765fc1",
+			"sha1": "add3bf0ca980c8fc4fd1811acdd03801de54247f",
+			"sha256": "72634e2fa17be9c0ba983e6752739c90d42778b3b323c46c75e0a2c1d55724bc"
+		},
+		"dob": {
+			"date": "1957-12-06T17:35:12.849Z",
+			"age": 64
+		},
+		"registered": {
+			"date": "2018-04-22T03:04:49.949Z",
+			"age": 3
+		},
+		"phone": "47162253",
+		"cell": "30520502",
+		"id": {
+			"name": "CPR",
+			"value": "061257-3209"
+		},
+		"picture": {
+			"large": "https://randomuser.me/api/portraits/women/46.jpg",
+			"medium": "https://randomuser.me/api/portraits/med/women/46.jpg",
+			"thumbnail": "https://randomuser.me/api/portraits/thumb/women/46.jpg"
+		},
+		"nat": "DK"
+	}],
+	"info": {
+		"seed": "b64d8129e50670d0",
+		"results": 1,
+		"page": 1,
+		"version": "1.3"
+	}
+}
+ 
+      var person=data.results[0];
+      var person=data.res[0];
+      var output=document.querySelector('#output');
+      var html=person.name.first+ '  '+person.name.last+'  '+person.location.city+' '+person.dob.age+' ' ;
+      html+='<img src="'+person.picture.thumbnail+'">';
+      var html=person.name.first+ '  '+person.name.last+'  '+person.location.city+' '+person.dob.age+' ' ;
+      html+='<img src="'+person.picture.thumbnail+'">';
+       output.innerHTML=html;
+    </script>
+    
+</body>
+</html>
